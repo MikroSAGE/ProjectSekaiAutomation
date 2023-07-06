@@ -7,6 +7,8 @@ import keyboard
 import subprocess
 import time
 import numpy as np
+from matplotlib import pyplot as plt
+
 
 ahk = AHK()
 
@@ -98,5 +100,5 @@ class Client:
         finally:
             print("Finished running")
 
-
-
+    def arrToContoursArr(array):
+        img = cv2.imread("pjsekaiTest2.JPG")
