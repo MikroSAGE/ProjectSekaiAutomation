@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47d41557-2c01-44f7-9787-536f3be14a15" name="Changes" comment="Setup complete">
-      <change beforePath="$PROJECT_DIR$/ProjectSekaiAutomation/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSekaiAutomation/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="47d41557-2c01-44f7-9787-536f3be14a15" name="Changes" comment="Added a component to connect the program to the emulator via ADB, and created a function that transforms images into a list of RGB values.">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688527334834</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added an Emulator handler component to connect via ADB, and created a function that transforms images into a list of RGB values.">
+      <created>1688610537521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688610537521</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added a component to connect the program to the emulator via ADB, and created a function that transforms images into a list of RGB values.">
+      <created>1688610593264</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688610593264</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -128,6 +143,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup complete" />
+    <MESSAGE value="Added an Emulator handler component to connect via ADB, and created a function that transforms images into a list of RGB values." />
+    <MESSAGE value="Added a component to connect the program to the emulator via ADB, and created a function that transforms images into a list of RGB values." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a component to connect the program to the emulator via ADB, and created a function that transforms images into a list of RGB values." />
   </component>
 </project>

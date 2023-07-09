@@ -1,4 +1,3 @@
-from PIL import Image
 from ppadb.client import Client as AdbClient
 import win32con, win32gui, win32ui
 from threading import Thread
@@ -6,8 +5,6 @@ from ahk import AHK
 import keyboard
 import subprocess
 import time
-import numpy as np
-from matplotlib import pyplot as plt
 
 
 ahk = AHK()
@@ -27,19 +24,6 @@ def captureWindow(window_title, width, height):
     cDC.DeleteDC()
     win32gui.ReleaseDC(hwnd, wDC)
     win32gui.DeleteObject(dataBitMap.GetHandle())
-
-
-def imageToNumpyArr(img, upper_bound=0.72, lower_bound=0.87, width_bound=0.05):
-    image = Image.open(img)
-    width, height = image.width, image.height
-    image_array = np.array(image)
-    return image_array[int(height * upper_bound):int(height * lower_bound),
-                       int(width * width_bound):int(-width * width_bound)]
-
-
-def createImageFromArr(array):
-    image = Image.fromarray(array)
-    image.save('output_image.jpg')
 
 
 class Client:
@@ -92,13 +76,6 @@ class Client:
                     print("Program terminated")
                     break
 
-                if keyboard.is_pressed("ctrl") and keyboard.is_pressed('c'):
-                    captureWindow(self.title, self.window.get_position()[2], self.window.get_position()[3])
-                    createImageFromArr(imageToNumpyArr("windowCapture.bmp"))
-                    time.sleep(1)
-
         finally:
             print("Finished running")
 
-    def arrToContoursArr(array):
-        img = cv2.imread("pjsekaiTest2.JPG")
