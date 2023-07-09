@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47d41557-2c01-44f7-9787-536f3be14a15" name="Changes" comment="Setup complete">
-      <change beforePath="$PROJECT_DIR$/ProjectSekaiAutomation/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSekaiAutomation/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="47d41557-2c01-44f7-9787-536f3be14a15" name="Changes" comment="Added a component to connect the program to the emulator via ADB, and created a function that transforms images into a list of RGB values.">
+      <change afterPath="$PROJECT_DIR$/pyslicer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -44,7 +49,7 @@
       <recent name="C:\Users\mikep\Documents\python_workspace\ProjectSekaiAutomation\ProjectSekaiAutomation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.pyslicer">
     <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ProjectSekaiAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,8 +92,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pyslicer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ProjectSekaiAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyslicer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pyslicer" />
         <item itemvalue="Python.client" />
       </list>
     </recent_temporary>
@@ -109,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688527334834</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added an Emulator handler component to connect via ADB, and created a function that transforms images into a list of RGB values.">
+      <created>1688610537521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688610537521</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added a component to connect the program to the emulator via ADB, and created a function that transforms images into a list of RGB values.">
+      <created>1688610593264</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688610593264</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -128,6 +169,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup complete" />
+    <MESSAGE value="Added an Emulator handler component to connect via ADB, and created a function that transforms images into a list of RGB values." />
+    <MESSAGE value="Added a component to connect the program to the emulator via ADB, and created a function that transforms images into a list of RGB values." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a component to connect the program to the emulator via ADB, and created a function that transforms images into a list of RGB values." />
   </component>
 </project>
