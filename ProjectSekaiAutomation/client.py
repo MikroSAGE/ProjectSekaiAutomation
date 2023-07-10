@@ -101,7 +101,7 @@ class Client:
     def launchEmulator(self):
         print("starting up...")
         subprocess.call([rf"C:\Program Files\BlueStacks_nxt\{self.process}"], shell=True)
-
+:
     def getWindow(self):
         try:
             # wait up to 5 seconds for WINDOW
