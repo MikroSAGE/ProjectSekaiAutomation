@@ -1,4 +1,3 @@
-from PIL import Image
 from ppadb.client import Client as AdbClient
 import win32con, win32gui, win32ui
 from threading import Thread
@@ -6,11 +5,9 @@ from ahk import AHK
 import keyboard
 import subprocess
 import time
-import numpy as np
-from matplotlib import pyplot as plt
-import cv2
 
-# ahk = AHK()
+
+ahk = AHK()
 
 
 def captureWindow(window_title, width, height):
@@ -29,63 +26,6 @@ def captureWindow(window_title, width, height):
     win32gui.DeleteObject(dataBitMap.GetHandle())
 
 
-def imageToNumpyArr(img, upper_bound=0.72, lower_bound=0.87, width_bound=0.05):
-    image = "latest.png"
-    image = Image.open(img)
-    width, height = image.width, image.height
-    image_array = np.array(image)
-    return image_array[int(height * upper_bound):int(height * lower_bound),
-                       int(width * width_bound):int(-width * width_bound)]
-
-
-def createImageFromArr(array):
-    image = Image.fromarray(array)
-    image.save('output_image2.jpg')
-
-# createImageFromArr(imageToNumpyArr("noteBar.png"))
-
-def getContours(img):
-    img = cv2.imread(img)
-    imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    # imgray = cv2.equalizeHist(imgray)
-    cv2.imshow("w", imgray)
-    ret, thresh = cv2.threshold(imgray, 45, 255, cv2.THRESH_BINARY_INV)
-    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE , cv2.CHAIN_APPROX_NONE)
-    # cv2.drawContours(img, contours, -1, (0, 255, 0), 3)
-    print(len(contours))
-    for i in range(10,  len(contours)):
-        # print(contours[i], "\n")
-        cv2.drawContours(img, contours, i, (0, 255, 0), 3)
-        cv2.imshow("contours", img)
-        cv2.waitKey()
-
-    cv2.imshow("contours", img)
-    cv2.waitKey()
-# getContours("output_image2.jpg")
-template = cv2.imread('note1.png')
-note1TestImg = cv2.imread("note1TestImg2.png")
-note1 = cv2.imread("note1.png")
-
-gray_image = cv2.cvtColor(note1TestImg, cv2.COLOR_BGR2GRAY)
-gray_template = cv2.cvtColor(note1, cv2.COLOR_BGR2GRAY)
-result = cv2.matchTemplate(gray_image, gray_template, cv2.TM_CCOEFF_NORMED)
-# print(result)
-
-min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
-print(min_val)
-print(max_val)
-print(min_loc)
-print(max_loc)
-top_left = max_loc
-bottom_right = (top_left[0] + template.shape[1], top_left[1] + template.shape[0])
-cv2.rectangle(note1TestImg, top_left, bottom_right, (0, 255, 0), 2)
-
-
-cv2.imshow('Template Matching Result', note1TestImg)
-cv2.waitKey(0)
-
-
-
 class Client:
 
     def __init__(self):
@@ -101,7 +41,7 @@ class Client:
     def launchEmulator(self):
         print("starting up...")
         subprocess.call([rf"C:\Program Files\BlueStacks_nxt\{self.process}"], shell=True)
-:
+
     def getWindow(self):
         try:
             # wait up to 5 seconds for WINDOW
@@ -136,13 +76,6 @@ class Client:
                     print("Program terminated")
                     break
 
-                if keyboard.is_pressed("ctrl") and keyboard.is_pressed('c'):
-                    captureWindow(self.title, self.window.get_position()[2], self.window.get_position()[3])
-                    createImageFromArr(imageToNumpyArr("windowCapture.bmp"))
-                    time.sleep(1)
-
         finally:
             print("Finished running")
 
-    def arrToContoursArr(array):
-        img = cv2.imread("pjsekaiTest2.JPG")
