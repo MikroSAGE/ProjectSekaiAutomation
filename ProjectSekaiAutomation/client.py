@@ -7,7 +7,7 @@ import subprocess
 import time
 
 
-ahk = AHK()
+# ahk = AHK()
 
 
 def captureWindow(window_title, width, height):
@@ -24,7 +24,6 @@ def captureWindow(window_title, width, height):
     cDC.DeleteDC()
     win32gui.ReleaseDC(hwnd, wDC)
     win32gui.DeleteObject(dataBitMap.GetHandle())
-
 
 class Client:
 
