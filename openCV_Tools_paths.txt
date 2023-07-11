@@ -1,0 +1,8 @@
+annotation tool: "C:/Users/michh/Downloads/opencv/build/x64/vc15/bin/opencv_annotation.exe"
+/opencv/build/x64/vc15/bin/opencv_annotation.exe
+
+createsample tool: "C:/Users/michh/Downloads/opencv/build/x64/vc15/bin/opencv_createsamples.exe"
+/opencv/build/x64/vc15/bin/opencv_createsamples.exe
+
+traincascade exe: "C:/Users/michh/Downloads/opencv/build/x64/vc15/bin/opencv_traincascade.exe"
+opencv/build/x64/vc15/bin/opencv_traincascade.exe
